@@ -182,4 +182,12 @@ contract Raffle is VRFConsumerBaseV2Plus {
     function getPlayerByIndex(uint256 indexPlayer) external view returns (address) {
         return s_players[indexPlayer];
     }
+
+    function getLastTimeStamp() external view returns (uint256) {
+      return s_lastTimeStamp;
+    }
+
+    function getRecentWinner() external view returns (address) {
+      return s_recentWinner;
+    }
 }
